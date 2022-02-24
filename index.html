@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+
+    <div class="grid-wrapper">
+        <div class="side-wrapper">
+            <nav class="sidebar" id="nav-bar">
+                <ul>
+                    <h2><a href="#introduction" class="title">Introduction</a></h2>
+
+                    <li><a href="#graphql" class="nav-link">GraphQl</a></li>
+                    <li><a href="#rest" class="nav-link">REST</a></li>
+                    <li><a href="info" class="nav-link">Info and Pagination</a></li>
+                    <li><a href="js_client" class="nav-link">JavaScript Client</a></li>
+                </ul>
+                <ul>
+                    <h2><a href="#character" class="title">Character</a></h2>
+
+                    <li><a href="" class="nav-link">Character schema</a></li>
+                    <li><a href="" class="nav-link">Get all characters</a></li>
+                    <li><a href="" class="nav-link">Get a single character</a></li>
+                    <li><a href="" class="nav-link">Get multiple characters</a></li>
+                    <li><a href="" class="nav-link">Filter characters</a></li>
+                </ul>
+                <ul>
+                    <h2><a href="#location" class="title">Location</a></h2>
+
+                    <li><a href="" class="nav-link">Get all locations</a></li>
+                    <li><a href="" class="nav-link">Get a single location</a></li>
+                    <li><a href="" class="nav-link">Get multiple locations</a></li>
+                    <li><a href="" class="nav-link">Filter locations</a></li>
+                </ul>
+
+                <ul>
+                    <h2><a href="#episode" class="title">Episodes</a></h2>
+
+                    <li><a href="#graphql" class="nav-link">Episode Schema</a></li>
+                    <li><a href="#rest" class="nav-link">Get single episode</a></li>
+                    <li><a href="info" class="nav-link">Get multiple Episodes</a></li>
+                    <li><a href="js_client" class="nav-link">Filter Episodes</a></li>
+                </ul>
+                <ul>
+                    <h2><a href="#libraries" class="title">Libraries</a></h2>
+
+                    <li><a href="#dart" class="nav-link">Dart</a></li>
+                    <li><a href="#python" class="nav-link">Python</a></li>
+                    <li><a href="swift" class="nav-link">Swift</a></li>
+                    <li><a href=".net" class="nav-link">.NET</a></li>
+                </ul>
+                <ul>
+                    <h2><a href="#introduction" class="title">Introduction</a></h2>
+
+                    <li><a href="#graphql" class="nav-link">GraphQl</a></li>
+                    <li><a href="#rest" class="nav-link">REST</a></li>
+                    <li><a href="info" class="nav-link">Info and Pagination</a></li>
+                    <li><a href="js_client" class="nav-link">JavaScript Client</a></li>
+                </ul>
+                <ul>
+                    <h2><a href="#introduction" class="title">Introduction</a></h2>
+
+                    <li><a href="#graphql" class="nav-link">GraphQl</a></li>
+                    <li><a href="#rest" class="nav-link">REST</a></li>
+                    <li><a href="info" class="nav-link">Info and Pagination</a></li>
+                    <li><a href="js_client" class="nav-link">JavaScript Client</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main id="main-doc" class="grid-item">
+            <header class="logo">
+                <img src="images/R&M.png" alt="R&M" style="width: 70px; height: 70px" />
+                <h1 class="topic">Rick And Morty Api Docs</h1>
+            </header>
+            <section class="main-section">
+                <header id="introduction">
+                    <h1 class="title">Introduction</h1>
+                </header>
+                <p>
+                    This documentation will help you get familiar with the resources of
+                    the Rick and Morty API and show you how to make different queries,
+                    so that you can get the most out of it.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae, ipsam a dolore architecto
+                    cum magni ullam quae quia adipisci aliquam exercitationem quod. Amet distinctio temporibus pariatur
+                    assumenda est facere?
+                </p>
+
+            </section>
+            <section class="main-section">
+                <header id="graphql">
+                    <h1 class="title">GraphQl</h1>
+                </header>
+                <p>
+                    <a href="https://rickandmortyapi.com/graphql"
+                        class="fetch_graphql">https://rickandmortyapi.com/graphql</a>
+                </p>
+                <pre class="language-graphql code"><code class="language-graphql "><span class="token keyword">query</span> <span class="token punctuation">{</span>
+                    characters<span class="token punctuation">(</span><span class="token attr-name">page</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token attr-name">filter</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">name</span><span class="token punctuation">:</span> <span class="token string">"rick"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      info <span class="token punctuation">{</span>
+                        count
+                      <span class="token punctuation">}</span>
+                      results <span class="token punctuation">{</span>
+                        name
+                      <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                    location<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      id
+                    <span class="token punctuation">}</span>
+                    episodesByIds<span class="token punctuation">(</span><span class="token attr-name">ids</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      id
+                    <span class="token punctuation">}</span>
+                  <span class="token punctuation">}</span>
+                  </code></pre>
+                <div class="learn-graphql">
+                    <p style="font-weight: lighter;"><i>New to GraphQl? Click <b><a class="fetch_graphql here"
+                                    href="">here</a></b></i></p>
+                </div>
+            </section>
+            <section class="main-section">
+                <header id="rest">
+                    <h1 class="title">REST</h1>
+                    <p>
+                        <span style="font-weight: bold; ">Base url: </span> <a
+                            href="https://rickandmortyapi.com/graphql"
+                            class="fetch_graphql">https://rickandmortyapi.com/api</a>
+                    </p>
+                    <p>
+                        The base url contains information about all available API's resources. All requests are <span
+                            class="term">GET</span>
+                        requests and go over <span class="term">https</span>. All responses will return data in <span
+                            class="term">json</span>.
+                    </p>
+                </header>
+                <pre class="code">
+                    <code>
+                     GET https://rickandmortyapi.com/api
+                     <hr style="color: #fff;">
+                        {
+                            "characters": "https://rickandmortyapi.com/api/character",
+                            "locations": "https://rickandmortyapi.com/api/location",
+                            "episodes": "https://rickandmortyapi.com/api/episode"
+                        }
+                    </code>
+                </pre>
+                <p>There are currently three available resources:</p>
+                <ul class="list">
+                    <li><a href="#character">Character</a>: used to get all the characters.</li>
+                    <li><a href="location">Location</a>: used to get all the locations.</li>
+                    <li><a href="episode">Episode</a>: used to get all the episodes.</li>
+                </ul>
+            </section>
+
+
+            <section class="main-section">
+                <header id="character">
+                    <h1 class="title">Character</h1>
+                </header>
+                <p>There is a total of <span class="term">826</span> characters sorted by id.</p>
+                <h2 class="title">Character Schema</h2>
+
+
+                <!-- create table with 3 columns and 10 rows -->
+                <table>
+                    <tr>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>int</td>
+                        <td>The id of the character</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>string</td>
+                        <td>Name of character</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>string</td>
+                        <td>the status of the character ('Alive', 'Dead' or 'unknown').</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>string</td>
+                        <td>The species of the character.</td>
+                    </tr>
+                    <tr>
+                        <td>species</td>
+                        <td>string</td>
+                        <td>The type or subspecies of the character.</td>
+                    </tr>
+                    <tr>
+                        <td>gender</td>
+                        <td>string</td>
+                        <td>The gender of the character ('Female', 'Male', 'Genderless' or 'unknown').</td>
+                    </tr>
+                    <tr>
+                        <td>location</td>
+                        <td>string</td>
+                        <td>Name and link to the character's last known location endpoint.</td>
+                    </tr>
+                    <tr>
+                        <td>image</td>
+                        <td>image</td>
+                        <td>Link to the character's image. All images are 300x300px and most are medium shots or
+                            portraits since they are intended to be used as avatars.</td>
+                    </tr>
+                    <tr>
+                        <td>episode</td>
+                        <td>array</td>
+                        <td>List of episodes in which this character appeared.</td>
+                </table>
+                <h1 class="title">Get multiple characters</h1>
+                <p> You can get multiple characters by adding an array of <span class="term">ids</span> as parameter:
+                    <span class="term">/character/[1,2,3]</span> or <span class="term">/character/1,2,3</span>
+                </p>
+                <pre class="code">
+                    <code>
+                    GET https://rickandmortyapi.com/api/character/1,2,3
+                    <hr style="color: #fff;">
+                    {
+                        "info": {
+                            "count": 3,
+                            "pages": 1,
+                            "next": null,
+                            "prev": null
+                        },  <span class="token punctuation">...</span>
+                        <span class="token punctuation">}</span>
+                    </code>
+                </pre>
+                <h1 class="title">Get single character</h1>
+                <p>You can get a single character by adding the <span class="term">id</span> as parameter:
+                    <span class="term">/character/1</span>
+                </p>
+                <pre class="code">
+                    <code>
+                    GET https://rickandmortyapi.com/api/character/1
+                    <hr style="color: #fff;">
+                    {
+                        "id": 1,
+                        "name": "Rick Sanchez",
+                        "status": "Alive",
+                        "species": "Human",
+                        "type": "",
+                        "gender": "male",
+                        "origin": {
+                            "name": "Earth",
+                            "url": "https://rickandmortyapi.com/api/location/1"
+                          },
+                          "location": {
+                            "name": "Earth",
+                            "url": "https://rickandmortyapi.com/api/location/20"
+                          },
+                          "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+                          "episode": [
+                            "https://rickandmortyapi.com/api/episode/1",
+                            "https://rickandmortyapi.com/api/episode/2",
+                            // ...
+                          ],
+                          "url": "https://rickandmortyapi.com/api/character/2",
+                          "created": "2017-11-04T18:50:21.651Z"
+                        }
+                    </code>
+                </pre>
+                <h1 class="title">Filter Characters</h1>
+                <p>You can filter the characters by adding a <span class="term">query parameter</span> to the request:
+                    <span class="term">?name=Rick</span>
+                </p>
+                <p>Available Character:</p>
+                <ul class="list">
+                    <li><span class="term">name</span>: filter by the given name.</li>
+                    <li><span class="term">status</span>: filter by the given status.</li>
+                    <li><span class="term">species</span>: filter by the given species.</li>
+
+                </ul>
+                <pre class="code">
+                    <code>
+                    GET https://rickandmortyapi.com/api/character?name=Rick
+                    <hr style="color: #fff;">
+                    {
+                        "info": {
+                            "count": 1,
+                            "pages": 1,
+                            "next": null,
+                            "prev": null
+                        },  <span class="token punctuation">...</span>
+                        <span class="token punctuation">}</span>
+                    </code>
+                </pre>
+
+
+            </section>
+            <section class="main-section">
+                <header id="location">
+                    <h1 class="title">Location</h1>
+                </header>
+                <p>There is a total of <span class="term">126</span> locations sorted by id.</p>
+                <h2 class="title">Location Schema</h2>
+                <table>
+                    <tr>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>int</td>
+                        <td>The id of the location</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>string</td>
+                        <td>The name of the location.</td>
+                    </tr>
+                    <tr>
+                        <td>type</td>
+                        <td>string</td>
+                        <td>The type of location.</td>
+                    </tr>
+                    <tr>
+                        <td>dimension</td>
+                        <td>string</td>
+                        <td>The dimension in which the location is located.</td>
+                    </tr>
+                    <tr>
+                        <td>residents</td>
+                        <td>array</td>
+                        <td>A list of characters present in the location.</td>
+                    </tr>
+                    <tr>
+                        <td>url</td>
+                        <td>string</td>
+                        <td>The url of the location.</td>
+                    </tr>
+                    <tr>
+                        <td>created</td>
+                        <td>string</td>
+                        <td>The time at which the location was created in the database.</td>
+                    </tr>
+                </table>
+                <h1 class="title">Get multiple locations</h1>
+                <p> You can get multiple locations by adding an array of <span class="term">ids</span> as parameter:
+                    <span class="term">/location/[1,2,3]</span> or <span class="term">/location/1,2,3</span>
+                </p>
+                <pre class="code">
+                    <code>
+                    GET https://rickandmortyapi.com/api/location/1,2,3
+                    <hr style="color: #fff;">
+                    {
+                        "info": {
+                            "count": 3,
+                            "pages": 1,
+                            "next": null,
+                            "prev": null
+                        },  <span class="token punctuation">...</span>
+                        <span class="token punctuation">}</span>
+                    </code>
+                </pre>
+                <h1 class="title">Get single location</h1>
+                <p>You can get a single location by adding the <span class="term">id</span> as parameter:
+                    <span class="term">/location/1</span>
+                </p>
+                <pre class="code">
+                    <code>
+                    GET https://rickandmortyapi.com/api/location/1
+                    <hr style="color: #fff;">
+                    {
+                        "id": 1,
+                        "name": "Earth (C-137)",
+                        "type": "Planet",
+                        "dimension": "unknown",
+                        "residents": [
+                          "https://rickandmortyapi.com/api/character/1",
+                          "https://rickandmortyapi.com/api/character/2",
+                          // ...
+                        ],
+                        "url": "https://rickandmortyapi.com/api/location/1",
+                        "created": "2017-11-10T13:08:13.191Z"
+                    }
+                    </code>
+                </pre>
+                <h1 class="title">Filter Locations</h1>
+                <p>You can filter the locations by adding a <span class="term">query parameter</span> to the request:
+                    <span class="term">?name=Earth</span>
+                </p>
+                <p>Available Locations:</p>
+                <ul class="list">
+                    <li><span class="term">name</span>: filter by the given name.</li>
+                    <li><span class="term">type</span>: filter by the given type.</li>
+                    <li><span class="term">dimension</span>: filter by the given dimension.</li>
+
+                </ul>
+                <pre class="code">
+                    <code>
+                    GET https://rickandmortyapi.com/api/location?name=Earth
+                    <hr style="color: #fff;">
+                    {
+                        "info": {
+                            "count": 1,
+                            "pages": 1,
+                            "next": null,
+                            "prev": null
+                        },  <span class="token punctuation">...</span>
+                        <span class="token punctuation">}</span>
+                    </code>
+                </pre>
+
+            </section>
+            <section class="main-section">
+                <header id="episode">
+                    <h1 class="title">Episodes</h1>
+                </header>
+                <p>There is a total of <span class="term">11</span> episodes sorted by id.</p>
+                <h2 class="title">Episode Schema</h2>
+                <table>
+                    <tr>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>int</td>
+                        <td>The id of the episode</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>string</td>
+                        <td>The name of the episode.</td>
+                    </tr>
+                    <tr>
+                        <td>air_date</td>
+                        <td>string</td>
+                        <td>The air date of the episode.</td>
+                    </tr>
+                    <tr>
+                        <td>episode</td>
+                        <td>string</td>
+                        <td>The episode number of the episode.</td>
+                    </tr>
+                    <tr>
+                        <td>characters</td>
+                        <td>array</td>
+                        <td>A list of characters who appear in the episode.</td>
+                    </tr>
+                    <tr>
+                        <td>url</td>
+                        <td>string</td>
+                        <td>The url of the episode.</td>
+                    </tr>
+                    <tr>
+                        <td>created</td>
+                        <td>string</td>
+                        <td>The time at which the episode was created in the database.</td>
+                    </tr>
+                </table>
+                <h1 class="title">Get multiple episodes</h1>
+                <p> You can get multiple episodes by adding an array of <span class="term">ids</span> as parameter:
+                    <span class="term">/episode/[1,2,3]</span> or <span class="term">/episode/1,2,3</span>
+                </p>
+                <pre class="code">
+                    <code>
+                    GET https://rickandmortyapi.com/api/episode/1,2,3
+                    <hr style="color: #fff;">
+                    {
+                        "info": {
+                            "count": 3,
+                            "pages": 1,
+                            "next": null,
+                            "prev": null
+                        },  <span class="token punctuation">...</span>
+                        <span class="token punctuation">}</span>
+                    </code>
+                </pre>
+                <h1 class="title">Get single episode</h1>
+                <p>You can get a single episode by adding the <span class="term">id</span> as parameter:
+                    <span class="term">/episode/1</span>
+                </p>
+                <pre class="code">
+                    <code>
+                    GET https://rickandmortyapi.com/api/episode/28
+                    <hr style="color: #fff;">
+                    {
+                        "id": 28,
+                        "name": "The Ricklantis Mixup",
+                        "air_date": "September 10, 2017",
+                        "episode": "S03E07",
+                        "characters": [
+                          "https://rickandmortyapi.com/api/character/1",
+                          "https://rickandmortyapi.com/api/character/2",
+                          // ...
+                        ],
+                        "url": "https://rickandmortyapi.com/api/episode/28",
+                        "created": "2017-11-10T12:56:36.618Z"
+                      }
+                      </code>
+                </pre>
+                <h1 class="title">Filter Episodes</h1>
+                <p>You can filter the episodes by adding a <span class="term">query parameter</span> to the request:
+                    <span class="term">?name=The Ricklantis Mixup</span>
+                </p>
+                <p>Available Episodes:</p>
+                <ul class="list">
+                    <li><span class="term">name</span>: filter by the given name.</li>
+                    <li><span class="term">air_date</span>: filter by the given air date.</li>
+                    <li><span class="term">episode</span>: filter by the given episode number.</li>
+                </ul>
+                <pre class="code">
+                    <code>
+                    GET https://rickandmortyapi.com/api/episode?name=The Ricklantis Mixup
+                    <hr style="color: #fff;">
+                    {
+                        "info": {
+                            "count": 1,
+                            "pages": 1,
+                            "next": null,
+                            "prev": null
+                        },  <span class="token punctuation">...</span>
+                        <span class="token punctuation">}</span>
+                    </code>
+                </pre>
+            </section>
+            <!-- libraries -->
+            <section class="main-section">
+                <header id="libraries">
+                    <h1 class="title">Libraries</h1>
+                </header>
+                <p>Here you will find a list of community helper libraries to use the Rick and Morty API with your
+                    preferred language. You can also quickly start using the API with this <a class="fetch_graphql"
+                        href="https://github.com/loopDelicious/rick-and-morty-postman"> Postman collection </a> created
+                    by loopDelicious.
+                </p>
+                <p>
+                    If you are looking for a JavaScript library, you can check <a
+                        href="https://rickandmortyapi.com/documentation/#javascript-client" class="fetch_graphql"> The
+                        Rick and Morty API JavaScript client</a></p>
+                <h2 class="title">Dart</h2>
+                <p>The Dart client is available on <a href="https://github.com/Yash-Garg/RickandMorty-Dart-Wrapper"
+                        class="fetch_graphql"> Rick and Morty API Dart Client </a>by Yash Garg</p>
+                <h2 class="title">Python</h2>
+                <p><a href="" class="fetch_graphql"> Python implementation for the Rick and Morty API </a>by Rohan Hazra
+                </p>
+            </section>
+        </main>
+
+    </div>
+</body>
+
+</html>

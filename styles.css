@@ -1,0 +1,193 @@
+:root {
+  --primary-color: rgb(255, 152, 0);
+  --background: rgb(236, 236, 236);
+  --titles: rgb(0, 255, 21);
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  background-color: var(--background);
+  overflow: hidden;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  line-height: 2;
+  text-align: left;
+  font-size: 1.2rem;
+}
+td,
+th {
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-color);
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+/* code block */
+.list {
+  list-style: circle;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.list a {
+  border-bottom: 2px solid var(--primary-color);
+  color: #000;
+}
+.tab {
+  display: inline-block;
+  margin-left: 40px;
+}
+.code {
+  background-color: #000;
+
+  color: #fff;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+#menu-bar {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  border-bottom: 0.8px rgb(177, 177, 177) solid;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+  background-color: var(--background);
+}
+.menu-items {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  padding-top: 10px;
+}
+.menu-link {
+  padding: 10px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.topic {
+  justify-self: right;
+  margin-left: 5em;
+  color: var(--primary-color);
+}
+.logo {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  /* background-color: rgb(184, 180, 180); */
+  height: 100px;
+}
+
+/* grid */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  grid-gap: 10px;
+}
+/* sidebar */
+.side-wrapper {
+  width: fit-content;
+}
+.sidebar {
+  background-color: var(--background);
+  line-height: 1.5;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow-y: scroll;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  #main-doc {
+    margin: 0;
+    text-align: left;
+    padding: 0 7%;
+  }
+  .topic {
+    margin-left: 10px;
+    justify-self: center;
+  }
+}
+
+#main-doc {
+  /* width: 100%; */
+  height: 100vh;
+  padding: 0 5%;
+  /* overflow-x: hidden; */
+  overflow-y: scroll;
+  text-align: justify;
+}
+.main-section {
+  margin-top: 50px;
+}
+/* navbar */
+.nav-link {
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+  font-weight: light;
+  font-size: 1.2rem;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+@media (max-width: 680px) {
+  #nav-bar {
+    display: none;
+  }
+}
+
+/* introduction */
+.fetch_graphql {
+  border-bottom: 2px solid var(--primary-color);
+  color: #000;
+}
+.fetch_graphql:hover {
+  border-bottom: none;
+  color: var(--primary-color);
+}
+.learn-graphql {
+  background-color: rgb(243, 202, 139);
+  border-left: 10px solid rgb(255, 152, 0);
+  padding: 1rem;
+}
+.term {
+  background-color: #ddd;
+  padding: 5px;
+  color: #333;
+}
+
+/* Rick and morty Api footer */
+.footer {
+  background-color: rgb(26, 26, 26);
+  padding: 7% 15%;
+  color: #fff;
+  font-size: 1.2rem;
+  height: 200px;
+  text-align: center;
+}
